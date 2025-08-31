@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Teodora Mihai Curriculum Vitae</title>
+  <style>
+    body {
+      font-family: Times New Roman, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 16px; /* mai vizibil pe mobil */
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      background: #fff;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: none; /* ascundem implicit */
+    }
+    h2 {
+      color: #004080;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Teodora Mihai Curriculum Vitae</h1>
+  <p>Bine ați venit!</p>
+</header>
+
+<nav>
+  <a onclick="showPage('despre')">Despre mine</a>
+  <a onclick="showPage('educatie')">Educație</a>
+  <a onclick="showPage('experienta')">Experiență profesională</a>
+  <a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<section id="despre">
+  <h2>Despre mine</h2>
+  <p>Nume: Teodora Mihai</p>
+  <p>Vârsta: 21 ani</p>
+  <p>Sex: Feminin</p>
+  <p>Naționalitate: Română</p>
+  <p>Sunt o persoană ambițioasă, perseverentă și orientată spre rezultate, cu o combinație solidă între pregătirea academică și experiența profesională. Îmi place să îmbin cunoștințele dobândite la Facultatea de Asistență Managerială și Administrativă cu experiența acumulată în domeniul bancar, unde am învățat să comunic eficient cu clienții și să găsesc soluții adaptate nevoilor lor. Mă caracterizează seriozitatea, atenția la detalii și dorința constantă de dezvoltare, atât personală, cât și profesională. Îmi doresc să contribui prin muncă responsabilă și implicare activă la succesul organizațiilor din care fac parte.</p>
+</section>
+
+<section id="educatie">
+  <h2>Educație</h2>
+  <ul>
+    <li><strong>Universitatea din București</strong> – Facultatea de Asistență Managerială și Administrativă</li>
+    <p><em>2023 – prezent</em></p>
+    <li><strong>Diploma de Bacalaureat</strong> – Colegiul Național "Zinca Golescu", Pitești</li>
+    <p><em>2019 – 2023</em></p>
+  </ul>
+</section>
+
+<section id="experienta">
+  <h2>Experiență profesională</h2>
+  <h3>Partener Client Retail – Banca Comercială Română (BCR)</h3>
+  <p><em>14 aprilie 2025 – prezent</em></p>
+  <ul>
+    <li>Ofer consultanță financiară personalizată clienților, identificând soluții potrivite pentru nevoile lor.</li>
+    <li>Gestionez solicitările pentru produse și servicii bancare (credite, carduri, conturi, asigurări).</li>
+    <li>Analizez documentația necesară pentru aprobarea creditelor și particip activ la evaluarea eligibilității clienților.</li>
+    <li>Dezvolt și mențin relații de încredere cu clienții, contribuind la fidelizarea portofoliului.</li>
+    <li>Colaborez cu echipa sucursalei pentru atingerea obiectivelor de vânzări și satisfacție a clienților.</li>
+  </ul>
+
+  <h3>Call Center Representative – Mellon România SA</h3>
+  <p><em>17 iunie 2024 – 9 aprilie 2025</em></p>
+  <ul>
+    <li>Am promovat și vândut produse și servicii bancare (credite de consum, carduri de credit, produse de asigurare).</li>
+    <li>Am contactat clienți existenți și potențiali prin telefon, prezentând ofertele bancare.</li>
+    <li>Am gestionat întrebările și obiecțiile clienților, oferind soluții adaptate.</li>
+    <li>Am contribuit la atingerea targeturilor de vânzări stabilite lunar.</li>
+    <li>Am menținut o comunicare profesionistă și empatică cu clienții.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:teodora.mihai@s.unibuc.ro">teodora.mihai@s.unibuc.ro</a></p>
+  <p>Telefon: <a href="tel:0785668539">0785668539</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/teodora-m-144618238" target="_blank">www.linkedin.com/in/teodora-m-144618238</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Teodora Mihai | Creat în august 2025</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  function showPage(id) {
+    document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+    document.getElementById(id).style.display = "block";
+  }
+
+  // La început afișăm secțiunea Despre mine
+  showPage('despre');
+
+  // Legăm click pe linkurile din meniu
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = this.getAttribute("onclick").match(/'(\w+)'/)[1];
+      showPage(target);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
